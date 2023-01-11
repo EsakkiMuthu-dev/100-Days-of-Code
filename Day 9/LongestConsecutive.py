@@ -1,25 +1,21 @@
 class Solution:
-    """
-    @param: strs: a list of strings
-    @return: encodes a list of strings to a single string.
-    """
-    def encode(self, strs):
-        # write your code here
-        out=""
-        for i in range(0,len(strs)):
-            if i == len(strs)-1:
-                out+=strs[i]
+    def longestConsecutive(self, nums: List[int]) -> int:
+        if nums ==[]:
+            return 0
+        nums=sorted(list(set(nums)))
+        counts=[]
+        start=0
+        end=1
+        count=1
+        # 1,2,3,4,100,200
+        while end<len(nums):
+            if nums[end]==nums[start]+1 :
+                count+=1
             else:
-                out+=strs[i]+":;"
+                counts.append(count)
+                count=1
+            start+=1
+            end+=1
+        counts.append(count)
+        return max(counts)
 
-        return out
-
-    """
-    @param: str: A string
-    @return: dcodes a single string to a list of strings
-    """
-    def decode(self, str):
-        # write your code here
-        org=str.split(":;")
-
-        return org
