@@ -27,3 +27,16 @@ if __name__ == '__main__':
         ob = Solution()
         print(ob.matSearch(mat, n, m, x))
 # } Driver Code Ends
+
+
+#  leetcode
+
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+
+        for row in range(len(matrix)):
+            if matrix[row][-1] >= target:
+                for i in range( len(matrix[row])):
+                    if matrix[row][i] == target:
+                        return True
+                return False
