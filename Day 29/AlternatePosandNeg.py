@@ -37,7 +37,23 @@ class Solution:
             j+=1
             k+=1
 
-
+#  if both len are equal
+class Solution:
+    def rearrangeArray(self, arr: List[int]) -> List[int]:
+        i=0
+        j=1
+        res=[0]*len(arr)
+        for a in arr:
+          
+            if a < 0:
+                res[j] = a
+                j+=2
+        
+            else:
+                res[i] = a
+                i+=2
+            
+        return res
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
