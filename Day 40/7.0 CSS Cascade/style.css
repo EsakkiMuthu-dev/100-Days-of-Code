@@ -20,6 +20,6 @@ p {
 
 #outer-box
 {
-  border: 10px solid violet;
+  background-color: purple;
   padding: 10px;
 }
