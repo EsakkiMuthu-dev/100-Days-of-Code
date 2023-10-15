@@ -33,3 +33,10 @@ console.log(MyBicycle.start());
 console.log(MyBicycle.ringBell());
 
 
+let sample={
+    obj:"obj1Val",
+    model:"Work in Progress!!"
+};
+sample.__proto__=Car;
+
+console.log(sample.start());
