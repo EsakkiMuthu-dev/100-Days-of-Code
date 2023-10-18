@@ -13,13 +13,14 @@ const Greet=({name,age})=>{
   )
 }
 
-function App() {
+function App({count}) {
 
   return (
     <>
     <h1>Hello!!</h1>
     <Greet name="Muthu" age="22" />
     <Greet name="Bharathi" age="22" />
+    <h1>Counter counts {count}</h1>
     </>
   )
 }
