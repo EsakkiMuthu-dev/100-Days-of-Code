@@ -7,6 +7,7 @@ let refresh =() => {ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )}
+<button>Count r</button>
 refresh()();
 count++;
 refresh()();
