@@ -1,25 +1,7 @@
 import { useState } from "react";
-
-
-//Display
-const Display=({count})=>{
-  return(
-    <>
-      <h1>{count}</h1>
-    </>
-  )
-}
-
-//Button
-const Button =({handleClick,text})=>{
-  return(
-    <>
-    <button onClick={handleClick}>
-    {text}
-    </button>
-    </>
-  )
-}
+import Button from "./Button";
+import Display from "./Display";
+import Clicks from "./Clicks";
 
 
 function App() {
@@ -36,6 +18,7 @@ function App() {
       <Button handleClick={decreaseByOne} text={"Decrease Count"} />
       <Button handleClick={reset} text={"reset"} />
       {/* <Button handleClick={reset} > reset</Button> */}
+      <Clicks />
 
     </>
   )
