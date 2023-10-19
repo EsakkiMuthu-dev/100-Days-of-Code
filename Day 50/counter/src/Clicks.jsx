@@ -7,7 +7,6 @@ export default function Clicks() {
     const[allClicks,setAllClicks]=useState([]);
     const [totalClicks,setTotalClicks]=useState(0);
     const increaseLeftButton = ()=>{
-        
         const updatedLeft=clicks.left+1;
         setClicks({...clicks,left:updatedLeft});
         
