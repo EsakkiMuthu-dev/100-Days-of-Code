@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+    
+    <script>
+        const fetchPromise = fetch("https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",);
+        console.log(fetchPromise);
+        // fetchPromise.then((response)=>{
+        //     console.log(fetchPromise);
+        //     const dataPromise = response.json();
+        //     console.log(dataPromise);
+        //     dataPromise.then((data)=> console.log(data));
+        // });
+        // fetchPromise
+        // .then((response)=> response.json())
+        // .then((data)=> console.log(data));
+        
+        fetchPromise
+        .then((response)=>{
+            if(!response.ok) throw new Error(`server Error : ${response.status} : ${response.statusText}`)
+            else return response.json();
+        })
+        .then((data)=> console.log(data))
+        .catch((error)=> console.error(` could not fetch products ${error}`))
+
+    </script>
+  </body>
+
+</html>
