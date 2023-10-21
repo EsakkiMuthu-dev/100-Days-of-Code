@@ -1,0 +1,39 @@
+body{
+    background-color: #FFF2D8;
+}
+h1{
+    text-align: center;
+    color: #113946;
+    
+}
+header{
+    background-color: #BCA37F;
+    margin-top: 0;
+}
+#qr{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25%;
+    margin-top:50px;
+    /* max-width: 150px; */
+    /* border: 2px solid black; */
+    border: 2px solid black;
+    width: 50%;
+}
+img{
+    margin: 30px;
+}
+button{
+    background-color: rgb(41, 163, 41);
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    margin-top: 20px;
+    align-items: center;
+}
+form{
+    border: 2px solid black;
+    width: 50%;
+    margin-left: 25%;
+    padding: 40px;
+}
