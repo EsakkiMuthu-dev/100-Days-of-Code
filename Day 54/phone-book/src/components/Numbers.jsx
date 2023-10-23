@@ -4,9 +4,10 @@ export default function Numbers({persons}) {
   return (
     <>
         <h1> Numbers </h1>
-        <ul>
-            {persons.map((person,index)=> <li key={index}>{person.name} : {person.number} </li>)}
+       { <ul>
+            {persons.map(({name,number},index)=> <li key={index}>{name} : {number} </li>)}
         </ul>
+       }
     </>
   )
 }
