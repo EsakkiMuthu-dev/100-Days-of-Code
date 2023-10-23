@@ -1,17 +1,25 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import PhoneBook from "./components/PhoneBook";
 import Numbers from "./components/Numbers";
 import Filter from "./components/Filter";
+import axios from 'axios';
 function App() {
-  const[persons ,setPersons]=useState([
-    { name: 'Arto Hellas', number: '040-123456'  },
-    { name: 'Ada Lovelace', number: '39-44-5323523' },
-    { name: 'Dan Abramov', number: '12-43-234345' },
-    { name: 'Mary Poppendieck', number: '39-23-6423122' }
-  ]);
-  const isUserExists=(user)=>persons.find(({name})=> name===user);
+  const[persons ,setPersons]=useState([]);
   const[personsToShow, setPersonsToShow]=useState(persons);
 
+  useEffect(()=>{
+    axios
+    .get('http://localhost:3001/persons')
+    .then(({data}) =>{
+      setPersons(data);
+      setPersonsToShow(data);
+    });
+
+  },[])
+
+  
+  const isUserExists=(user)=>persons.find(({name})=> name===user);
+  
   function handleSubmit(name,number)
   {
  
