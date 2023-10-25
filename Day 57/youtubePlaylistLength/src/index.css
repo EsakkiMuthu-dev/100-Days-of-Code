@@ -1,0 +1,14 @@
+body{
+  margin: 0;
+}
+
+.header{
+  margin-top: 0;
+  text-align: center;
+}
+.input{
+  margin-left: 25%;
+  margin-right:25%;
+  display: flex;
+  gap: 20px;
+}
