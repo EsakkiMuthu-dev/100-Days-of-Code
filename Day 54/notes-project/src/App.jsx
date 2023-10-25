@@ -1,11 +1,13 @@
 import { useState,useEffect } from "react";
 import Note from "./components/Note"
 import noteService from "./services/noteService";
+import Notifications from "./components/Notifications";
 
 function App() {
   const [notes,setNotes]=useState([]);
   const[newNote,setNewNote]=useState(' ');
   const[showAll,setShowAll] = useState(true);
+  const[message,setMessage] = useState(null);
   let importantStatus = true;
 
   useEffect(()=>{
@@ -41,8 +43,11 @@ function App() {
       .then((response)=>{
               setNotes(notes.map((note)=> note.id===id?response.data:note));})
       .catch((err)=>{
-        alert(`the note '${currentNote.content}' was already deleted from server`)
+        setMessage(`The note '${currentNote.content}' was already deleted from server`);
         setNotes(notes.filter(n => n.id !== id))
+        setTimeout(()=>{
+          setMessage(null)
+        },6000);
       });
     
   } 
@@ -51,6 +56,8 @@ function App() {
   return (
     <>
       <h1 style={{textAlign:'center'}}>Notes App</h1>
+
+      <Notifications message={message} />
       
      <button onClick={()=> setShowAll(!showAll)}> {showAll?"Show Important Only ":" Show All "} </button>
       <ul>

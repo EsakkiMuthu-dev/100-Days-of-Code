@@ -3,12 +3,15 @@
     background-color: rgb(158, 20, 20);
     color: white;
     border: none;
-    height: 40px;
-    width: 100px;
+    padding-top:13px ;
+    padding-bottom: 13px;
+    padding-left: 12px;
+    padding-right: 12px;
     border-radius: 3px;
     cursor: pointer;
     margin-right: 8px;
     transition: opacity 0.5s;
+    vertical-align: top;
 }
 #subscribe-btn:hover{
     opacity: 0.8;
@@ -18,8 +21,10 @@
 }
 #join-btn{
     border: 1px solid rgb(13, 127, 221);
-    height: 36px;
-    width: 80px;
+    padding-top:12px ;
+    padding-bottom: 11px;
+    padding-left: 14px;
+    padding-right: 14px;
     color: rgb(13, 127, 221);
     font-weight: bold;
     font-size: 15px;
@@ -176,6 +181,44 @@
 .link:hover{
     color: palevioletred;
 }
+.pagination{
+    margin-top: 40px;
+}
+.pbtn{
+    margin-right: 8px;
+    margin-left: 8px;
+    padding: 5px;
+}
+a{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.stretch{
+    background-color: green;
+    border: none;
+    padding: 10px;
+    color: white;
+    transition: padding-bottom 0.5s ;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.stretch:hover{
+    padding: 15px;
+    
+
+}
+.shadow{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 10px;
+   
+}
+.shadow:active{
+    padding-top: 9px;
+    padding-bottom: 8px;
+    box-shadow: 5px 5px 10px black;
+}
 </style>
 <button id="subscribe-btn">
     Subscribe
@@ -222,4 +265,22 @@
     <p>Free delivery  tomorrow</p>
     <button class="btn btn1">Add to cart</button>
     <button class="btn btn2"> Buy now! </button>
+</div>
+
+<div class="pagination">
+    <button class="pbtn"> Back </button>
+    <a href="www.google.com">1</a>
+    <a href="www.google.com">2</a>
+    <a href="www.google.com">3</a>
+    <a href="www.google.com">4</a>
+    <a href="www.google.com">5</a>
+    <button class="pbtn"> Next </button>
+
+</div>
+
+<div class="pagination">
+
+    <button class="stretch">Stretch</button>
+    <button class="shadow">shadow</button>
+
 </div>
