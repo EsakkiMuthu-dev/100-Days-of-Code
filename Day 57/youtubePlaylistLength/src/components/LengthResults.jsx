@@ -1,21 +1,20 @@
 import React from 'react';
 import ytpl from 'ytpl';
-
+import {fetchinfo} from './server'
 export default function LengthResults({url}) {
     console.log(typeof(url))
-    ytpl(url)
-        .then((res)=> console.log(res));
-    async function fetchinfo()
-    {
-        try{
-        const playlist = await ytpl(url);
-        durations=playlist.items.map((video)=> video.duration.split(':').map((val)=>Number.parseInt(val)));
-        calcDurations(durations);
-        }catch(error)
-        {
-            console.log(`We ran into error ${error}`)
-        }
-    }
+   
+    // async function fetchinfo()
+    // {
+    //     try{
+    //     const playlist = await ytpl(url);
+    //     durations=playlist.items.map((video)=> video.duration.split(':').map((val)=>Number.parseInt(val)));
+    //     calcDurations(durations);
+    //     }catch(error)
+    //     {
+    //         console.log(`We ran into error ${error}`)
+    //     }
+    // }
 
     function calcDurations(duration)
     {

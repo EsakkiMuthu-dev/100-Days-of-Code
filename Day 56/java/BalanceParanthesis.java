@@ -23,6 +23,7 @@ public class BalanceParanthesis {
         System.out.println("Enter the input: ");
          String brackets=sc.next();
          System.out.println(balanceBrackets(brackets));
+         System.out.println(balanceBrackets2(brackets));
     }
     public static String balanceBrackets(String brackets)
     {
@@ -66,5 +67,32 @@ public class BalanceParanthesis {
 
 
 
+    }
+
+    public static String balanceBrackets2(String brackets) {
+        int openCount = 0;
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < brackets.length(); i++) {
+            if (brackets.charAt(i) == '(') {
+                openCount++;
+            } else if (brackets.charAt(i) == ')') {
+                if (openCount > 0) {
+                    openCount--;
+                } else {
+                    continue; // skip unbalanced close parentheses
+                }
+            }
+            result.append(brackets.charAt(i));
+        }
+
+        // Remove any extra open parentheses
+        while (openCount > 0) {
+            int index = result.lastIndexOf("(");
+            result.deleteCharAt(index);
+            openCount--;
+        }
+
+        return result.toString();
     }
 }
