@@ -1,6 +1,7 @@
 public class Groups {
 /*
 
+
 2) To find the number of groups and output the groups:
 Explanation: To find the sum of the elements in the groups and that sum should be divisible by
 input X and the groups should be limited to range with X numbers.
@@ -15,6 +16,7 @@ Output:
 9, 6
 3, 9, 6
 No of groups: 4
+
 
  */
     public static void main(String[] args) {
