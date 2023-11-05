@@ -1,11 +1,13 @@
 public class MinimumAmongAll {
 /*
+
  1) Given an array, find the minimum of all the greater numbers for each element in the
 array.
 Sample:
 Array : {2, 3, 7, 1, 8, 5, 11}
 Output:
 {2>3, 3>5, 7>8, 1>2, 8>11, 5>7, 11>}
+
 
  */
     public static void main(String[] args) {
@@ -14,20 +16,11 @@ Output:
     }
     public static void mini(int[] arr)
     {
-         System.out.println();
-        System.out.println();
-         System.out.println();
-        System.out.println();
+   
        for(int i=0;i<arr.length;i++)
        {
- 
             System.out.print(arr[i]+">"+findMin(arr,arr[i])+", ");
-
        }
-       System.out.println();
-        System.out.println();
-         System.out.println();
-        System.out.println(); 
     }
     public static int findMin(int[] arr,int el)
     {
