@@ -11,6 +11,7 @@ import VideocamOffIcon from '@mui/icons-material/VideocamOff';
 import CallEndIcon from '@mui/icons-material/CallEnd';
 import Footer from './UIComponents/Footer';
 import CopyToClipboardButton from './UIComponents/CopyToClipboardButton';
+import { useMediaQuery } from 'react-responsive';
 function App() {
   const [peerId, setPeerID] = useState('');
   const [remotePeerId, setRemotePeerId] = useState('');
@@ -24,7 +25,7 @@ function App() {
   const ourVideoRef = useRef(null);
   const remoteVideoRef = useRef(null);
   const peerInstance = useRef(null);
-
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   // Function to toggle video
   const toggleVideo = () => {
     if (ourVideoRef.current.srcObject) {
