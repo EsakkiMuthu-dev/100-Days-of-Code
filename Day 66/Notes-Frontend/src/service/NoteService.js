@@ -10,4 +10,26 @@ const fetchNotes=async()=>{
     }
 }
 
-export {fetchNotes};
+const addNote = async( note)=>{
+    try{
+
+        const response = await axios.post(baseUrl,note);
+        return response;
+    }catch(e)
+    {
+        return "Error while adding Notes";
+
+    }
+}
+
+const deleteNote=async(id)=>{
+    try{
+        const res = await axios.delete(`${baseUrl}/${id}`);
+        return res;
+
+    }catch(e){
+        console.log("Can't Delete this note");
+    }
+}
+
+export {fetchNotes,addNote,deleteNote};
