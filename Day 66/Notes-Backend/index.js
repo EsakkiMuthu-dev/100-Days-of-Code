@@ -11,6 +11,16 @@ app.use(cors());
 //use json parser 
 app.use(express.json());
 
+
+//request logger
+const requestLogger = (request, response, next) => {
+    console.log('Method:', request.method)
+    console.log('Path:  ', request.path)
+    console.log('Body:  ', request.body)
+    console.log('---')
+    next()
+  }
+  app.use(requestLogger);
 // intialise Notes
 let notes=[
     {
