@@ -32,4 +32,15 @@ const deleteNote=async(id)=>{
     }
 }
 
-export {fetchNotes,addNote,deleteNote};
+const toggleImportance =async(id)=>{
+    try {
+        const res = await axios.put(`${baseUrl}/${id}`);
+        return res;
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+export {fetchNotes,addNote,deleteNote,toggleImportance};

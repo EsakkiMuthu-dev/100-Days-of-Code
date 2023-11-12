@@ -2,8 +2,9 @@
 const express = require('express');
 const uuid = require('uuid');
 const cors = require('cors');
-const app =express() // create express app and store it in app variable
-const PORT =3001;
+const morgan=require('morgan'); // morgan for logging!!
+const app =express(); // create express app and store it in app variable
+const PORT =process.env.PORT||3001;
 
 //use cors
 app.use(cors());
@@ -13,14 +14,18 @@ app.use(express.json());
 
 
 //request logger
-const requestLogger = (request, response, next) => {
-    console.log('Method:', request.method)
-    console.log('Path:  ', request.path)
-    console.log('Body:  ', request.body)
-    console.log('---')
-    next()
-  }
-  app.use(requestLogger);
+// const requestLogger = (request, response, next) => {
+//     console.log('Method:', request.method)
+//     console.log('Path:  ', request.path)
+//     console.log('Body:  ', request.body)
+//     console.log('---')
+//     next()
+//   }
+// app.use(requestLogger);
+
+// morgan logger
+app.use(morgan('dev'));
+
 // intialise Notes
 let notes=[
     {
@@ -94,6 +99,27 @@ app.delete('/api/notes/:id',(req,res)=>{
     notes = notes.filter((note)=> note.id!=id);
     res.status(204).send("Note Got Deleted Successfully!").end();
 })
+
+app.put('/api/notes/:id', (req, res) => {
+    const id =req.params.id;
+    
+    const noteIndex = notes.findIndex((note) => note.id === id);
+
+    if (noteIndex === -1) {
+        return res.status(404).json({
+            error: "Note not found"
+        });
+    }
+
+    // Update the importance of the note
+    notes[noteIndex].important = !notes[noteIndex].important;
+
+    // Send a response
+    res.json({
+        message: "Note updated successfully",
+        note: notes[noteIndex]
+    });
+});
 
 
 

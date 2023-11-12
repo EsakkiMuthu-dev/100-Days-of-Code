@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
 import StatusButton from './StatusButton'
-export default function Note({note,handleDelte}) {
-  console.log(note);
+export default function Note({note,handleDelte,handleToggleImportance}) {
+ 
   return (
-        <h4> {note.content}  - <StatusButton note={note} handleDelte={handleDelte}/></h4>
+        <h4> {note.content}  - <StatusButton note={note} handleToggleImportance={handleToggleImportance} handleDelte={handleDelte}/></h4>
   )  
   
 }

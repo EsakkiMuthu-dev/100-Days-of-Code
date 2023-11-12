@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function StatusButton({note,handleDelte}) {
+export default function StatusButton({note,handleDelte,handleToggleImportance}) {
     const text = note.important?"Important":"Not Important";
     const color= note.important?"red":"blue";
-    console.log(color)
+  
   return (
     <>
     <button style={{
@@ -12,6 +12,7 @@ export default function StatusButton({note,handleDelte}) {
     "borderRadius":"5px",
     "padding":"10px",
   "margin":"10px"}}
+      onClick={()=>handleToggleImportance(note.id)}
     >{text}</button>
 
     <button
