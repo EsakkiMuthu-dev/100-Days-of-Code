@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mantine/core": "^7.2.1",
+    "@mantine/hooks": "^7.2.1",
+    "@mantine/modals": "^7.2.1",
+    "@mantine/notifications": "^7.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -21,6 +25,9 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "postcss": "^8.4.31",
+    "postcss-preset-mantine": "^1.11.0",
+    "postcss-simple-vars": "^7.0.1",
     "vite": "^4.4.5"
   }
 }
