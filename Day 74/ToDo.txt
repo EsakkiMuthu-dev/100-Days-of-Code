@@ -1,0 +1,7 @@
+Topics to teach today:
+1)Prime Numbers:
+2)Factorial
+3)Fibonacci Series
+4)Divisibility
+5)Palindrome and Reversal
+6)GCD (Greatest Common Divisor) and LCM (Least Common Multiple)
