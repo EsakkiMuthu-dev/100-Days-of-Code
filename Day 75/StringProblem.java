@@ -23,7 +23,7 @@ import javax.swing.text.StyleConstants.CharacterConstants;
 
 public class StringProblem {
     public static void main(String[] args) {
-        String str = "(ab)(a+b)(2+3)";
+        String str = "(ab)+(a+b)-(2+3)";
         System.out.println(isValid(str));    
     }
 
@@ -52,8 +52,8 @@ public class StringProblem {
             {
                 
                 if(i+1>str.length() ||  // i+1 checking whether i+1 goes out of index -> true
-                (!Character.isLetterOrDigit(str.charAt(i-1)) || //  (
-                 !Character.isLetterOrDigit(str.charAt(i+1)))) // )
+                ((!Character.isLetterOrDigit(str.charAt(i-1)) && !(str.charAt(i-1)==')') )|| //  (
+                 !Character.isLetterOrDigit(str.charAt(i+1))  && !(str.charAt(i+1)=='('))) // )
                 {
                     return false;
                 }
