@@ -4,6 +4,7 @@ public class Taxi{
     private int id;
     private int earnings;
     private char currentLocation;
+    private int freetime;
     
     public Taxi()
     {
@@ -12,6 +13,7 @@ public class Taxi{
         count++;
         earnings=0;
         currentLocation='A';
+        freetime=6;
     }
 
     public int getId()
