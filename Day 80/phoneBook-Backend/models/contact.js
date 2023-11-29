@@ -14,9 +14,19 @@ const contactSchema = mongoose.Schema(
             trim:true,
             unique:true
         }
+    }, 
+    {
+        toJson:{
+            transform: (doc,ret)=>{
+                ret.id=doc._id;
+                delete ret._id;
+                delete  ret.__v;
+            }
+        }
+
     }
 )
 
-const contact = mongoose.model('contact',contactSchema);
+const Contact = mongoose.model('contact',contactSchema);
 
-module.exports=contact;
+module.exports=Contact;
