@@ -15,7 +15,10 @@ public class Taxi{
         currentLocation='A';
         freetime=6;
     }
-
+    public int getFreeTime()
+    {
+        return this.freetime;
+    }
     public int getId()
     {
         return this.id;
@@ -40,7 +43,10 @@ public class Taxi{
     {
         this.earnings = this.earnings+amount;
     }
-
+    public void updateFreeTime(int travelTime)
+    {
+        this.freetime = this.freetime+travelTime;
+    }
     @Override
     public String toString()
     {

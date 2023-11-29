@@ -100,6 +100,10 @@ public class Booking {
             ticketMap.put(tec.getId(), tec);
             System.out.println("ur id is"+tec.getId());
             System.out.println("\n <-------------------------->\n");
+            t1.updateEarnings(amount);
+            t1.setCurrentLocation(drop);
+            int travelTime= Math.abs(t1.getCurrentLocation()-pickup);
+            t1.updateFreeTime(travelTime);
             
         }else{
             System.out.println("can't proceed further");
@@ -107,22 +111,50 @@ public class Booking {
 
         
     }
-    public static Taxi getTaxi(char pickUpPoint,int pickUpTime){
-        int min=Integer.MAX_VALUE;
-        int taxiId=0;
-        for(Taxi tictic:taxiMap.values()){
-            if(tictic.getCurrentLocation()==pickUpPoint){
-                if(tictic.getEarnings()<min){
-                    min=tictic.getEarnings();
-                    taxiId=tictic.getId();
-                }
-
+    
+    public static Taxi getTaxi(char pickUpPoint, int pickUpTime) {
+        Taxi nearestTaxiWithLowestEarnings = null;
+        int minDistance = Integer.MAX_VALUE;
+    
+        // Check for taxis at the pickup location with the lowest earnings
+        for (Taxi taxi : taxiMap.values()) {
+            if (taxi.getCurrentLocation() == pickUpPoint && taxi.getEarnings() < minDistance) {
+                nearestTaxiWithLowestEarnings = taxi;
+                minDistance = taxi.getEarnings();
             }
-            
         }
-        return taxiMap.get(taxiId);
-
+    
+        // If no taxi is available at the pickup location, find the nearest taxi that can reach on time
+        if (nearestTaxiWithLowestEarnings == null) {
+            int minTimeToReach = Integer.MAX_VALUE;
+    
+            for (Taxi taxi : taxiMap.values()) {
+                int timeToReach = calculateTimeToReach(taxi.getCurrentLocation(), pickUpPoint);
+                if (canReachByTime(taxi, pickUpPoint, pickUpTime) && timeToReach < minTimeToReach) {
+                    nearestTaxiWithLowestEarnings = taxi;
+                    minTimeToReach = timeToReach;
+                }
+            }
+        }
+    
+        return nearestTaxiWithLowestEarnings;
     }
+    
+    // Helper method to calculate time to reach from current location to pickup point
+    private static int calculateTimeToReach(char currentLocation, char pickUpPoint) {
+        return Math.abs(currentLocation - pickUpPoint); // Assuming 60 minutes to travel between adjacent points
+    }
+    
+    // Add this method to the Booking class
+    private static boolean canReachByTime(Taxi taxi, char pickUpPoint, int pickUpTime) {
+        int travelTime = Math.abs(taxi.getCurrentLocation() - pickUpPoint); // Assuming 60 minutes to travel between adjacent points
+        int currentTime = taxi.getFreeTime() ; // Assuming all taxis start at 6 pm
+
+        return currentTime + travelTime <= pickUpTime;
+    }
+
+
+
     
     public static void ticketStatus()
     {
