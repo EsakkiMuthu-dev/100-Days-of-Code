@@ -8,5 +8,5 @@ const db = mongoose.connection;
 
 db.once('open', () => console.log("Connected to MongoDB successfully 💥"));
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
+db.on('close',()=> console.log("Conection closed Successfully! "))
 module.exports = db;

@@ -8,7 +8,8 @@ const contactSchema = mongoose.Schema(
         },
         phoneNumber:{
             type:String,
-            required:true
+            required:true,
+            unique:true
         }
 
     }
@@ -24,5 +25,4 @@ const contactSchema = mongoose.Schema(
 )
 
 const Contact = mongoose.model('contact',contactSchema);
-
 module.exports=Contact;

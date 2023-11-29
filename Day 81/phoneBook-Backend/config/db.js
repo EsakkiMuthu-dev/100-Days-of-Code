@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
-const mongoURI = "mongodb+srv://esakkimuthu6842:Muthu123@cluster0.mnw5k9a.mongodb.net/phoneBook?retryWrites=true&w=majority";
+const dotenv = require('dotenv');
+dotenv.config();
 
 // lets connect
-mongoose.connect(mongoURI)
+mongoose.connect(process.env.MONGO_URI);
 
 const db = mongoose.connection;
 
@@ -12,3 +13,8 @@ db.once('open',()=>{
 db.on('error',(e)=>{
     console.log("Mongo DB Error : "+e);
 })
+db.on('close',()=>{
+    console.log("Connection to mongo db ended!")
+})
+
+module.exports=db;

@@ -12,5 +12,6 @@ app.use('/api/contacts',contactRoutes);
 
 //start server
 app.listen( PORT,()=>{
-    console.log(`Server Started on http://localhost:${PORT}/api/contacts`)
+    console.log(`Server Started on http://localhost:${PORT}/api/contacts`);
+    
 })
