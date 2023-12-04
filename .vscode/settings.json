@@ -2,9 +2,10 @@
     "livePreview.defaultPreviewPath": "/Day 56/Html-Css-Revamp/buttons.html",
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
+        "Day 83",
         "Day 82/ReTaxi Booking App/src",
         "Day 79/TaxiApplication/TaxiApp/src",
         "Day 79/Demo",
-        "Day 83"
+        "Day 84"
     ]
 }
