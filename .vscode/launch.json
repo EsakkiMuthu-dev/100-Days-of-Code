@@ -1,0 +1,140 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "Booking",
+            "request": "launch",
+            "mainClass": "Booking",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "DEmo2",
+            "request": "launch",
+            "mainClass": "DEmo2",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "App(1)",
+            "request": "launch",
+            "mainClass": "Demo.src.App",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Demo.src.Main",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "Dummyxo",
+            "request": "launch",
+            "mainClass": "Dummyxo",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "FilterExercise1",
+            "request": "launch",
+            "mainClass": "FilterExercise1",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "FilterExercise2",
+            "request": "launch",
+            "mainClass": "FilterExercise2",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "FilterExercise3",
+            "request": "launch",
+            "mainClass": "FilterExercise3",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "FilterExercise4",
+            "request": "launch",
+            "mainClass": "FilterExercise4",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "Lambda",
+            "request": "launch",
+            "mainClass": "Lambda",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "MinesweeperGame",
+            "request": "launch",
+            "mainClass": "MinesweeperGame",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "PredicateEXercise2",
+            "request": "launch",
+            "mainClass": "PredicateEXercise2",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "PredicateExercise",
+            "request": "launch",
+            "mainClass": "PredicateExercise",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "PredicateExercise1",
+            "request": "launch",
+            "mainClass": "PredicateExercise1",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "PredicateExercise3",
+            "request": "launch",
+            "mainClass": "PredicateExercise3",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "Streams",
+            "request": "launch",
+            "mainClass": "Streams",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
+            "name": "xo",
+            "request": "launch",
+            "mainClass": "xo",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        }
+    ]
+}
