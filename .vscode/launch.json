@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ComparatorQuestion3",
+            "request": "launch",
+            "mainClass": "ComparatorQuestion3",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "ComparatorQuestion2",
+            "request": "launch",
+            "mainClass": "ComparatorQuestion2",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "ComparatorQuestion1",
+            "request": "launch",
+            "mainClass": "ComparatorQuestion1",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "StreamQuestion5",
             "request": "launch",
             "mainClass": "StreamQuestion5",
