@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FlattenAndFilter",
+            "request": "launch",
+            "mainClass": "FlattenAndFilter",
+            "projectName": "100-Days-of-Code_be68ceaf"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
