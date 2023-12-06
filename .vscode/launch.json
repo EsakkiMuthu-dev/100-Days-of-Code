@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ParallelVsSequentialExample",
+            "request": "launch",
+            "mainClass": "ParallelVsSequentialExample",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "ComparatorQuestion3",
             "request": "launch",
             "mainClass": "ComparatorQuestion3",
