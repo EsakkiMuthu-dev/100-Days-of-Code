@@ -6,6 +6,47 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StreamQuestion5",
+            "request": "launch",
+            "mainClass": "StreamQuestion5",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "StreamQuestion4",
+            "request": "launch",
+            "mainClass": "StreamQuestion4",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "StreamQuestion3",
+            "request": "launch",
+            "mainClass": "StreamQuestion3",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "StreamQuestion2",
+            "request": "launch",
+            "mainClass": "StreamQuestion2",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch Java Program",
+            "request": "launch",
+            "mainClass": ""
+        },
+        {
+            "type": "java",
+            "name": "StreamQuestion1",
+            "request": "launch",
+            "mainClass": "StreamQuestion1",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "GenerateAndFilterPairs",
             "request": "launch",
             "mainClass": "GenerateAndFilterPairs",
