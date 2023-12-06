@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GenerateAndFilterPairs",
+            "request": "launch",
+            "mainClass": "GenerateAndFilterPairs",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "FlattenAndFilter",
+            "request": "launch",
+            "mainClass": "FlattenAndFilter",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "FlattenAndFilter",
             "request": "launch",
             "mainClass": "FlattenAndFilter",

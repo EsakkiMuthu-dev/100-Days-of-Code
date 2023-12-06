@@ -11,7 +11,8 @@ public class FlattenAndFilter {
     }
     public static List<Integer> flattenAndFilter(List<List<Integer>> nestedLists) {
         List<Integer> result = nestedLists.stream()
-                                           .flatMap(ls->ls.stream())
+                                           .flatMap(ls::stream)
+                                           .filter(n->n%2!=0)
                                            .collect(Collectors.toList());
 
         return result;
