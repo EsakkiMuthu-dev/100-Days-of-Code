@@ -17,7 +17,7 @@ public class CounterExample implements Runnable {
         SharedCounter counter = new SharedCounter();
 
         // Your code here for creating and starting two threads
-        // ...
+        // your code here for creating and starting t...
         CounterExample c1 = new CounterExample(counter);
         CounterExample c2 = new CounterExample(counter);
         // Your code here for waiting for threads to finish
