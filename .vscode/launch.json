@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EvenOddPrinter",
+            "request": "launch",
+            "mainClass": "EvenOddPrinter",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "CounterExample",
+            "request": "launch",
+            "mainClass": "CounterExample",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "ParallelVsSequentialExample",
             "request": "launch",
             "mainClass": "ParallelVsSequentialExample",
