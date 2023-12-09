@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DeamonThreadEXample",
+            "request": "launch",
+            "mainClass": "DeamonThreadEXample",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "ThreadInterrupt",
+            "request": "launch",
+            "mainClass": "ThreadInterrupt",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "MultiThreadExample",
             "request": "launch",
             "mainClass": "MultiThreadExample",
