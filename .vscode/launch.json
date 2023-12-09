@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MultiThreadExample",
+            "request": "launch",
+            "mainClass": "MultiThreadExample",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "EvenOddPrinter",
             "request": "launch",
             "mainClass": "EvenOddPrinter",
