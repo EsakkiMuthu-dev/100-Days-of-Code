@@ -1,0 +1,42 @@
+<html>
+
+<head>
+<title>Student Registration form</title>
+</head>
+<body>
+	<form action="studentDropdownResponse.jsp" method="post" >
+		<label for="firstname">
+		First Name: 
+		</label>
+		<input type="text" name="firstname" />
+				<br><br>
+		<label for="lastname">
+		Last Name: 
+		</label>
+		<br><br>
+		<input type="text" name="lastname" />
+		
+		<br><br>
+		<label for="country">Select Country: </label>
+		<select name="country">
+		<option>India</option>
+		<option>USA</option>
+		<option>Canada</option>
+		<option>Australia</option>
+		<option>NewZeland</option>
+		</select>
+		<br><br>
+		<label for="gender">Gender: </label>
+		<input type="radio" name="gender" value="male">Male </input>
+		<input type="radio" name="gender" value="female">Female</input>
+		<br><br>
+		<label for="sports"> Favourite Sports: </label>
+		<input type="checkbox" name="sports" value="football"> Football</input>
+		<input type="checkbox" name="sports" value="cricket"> Cricket </input>
+		<input type="checkbox" name="sports" value="kabbadi"> Kabbadi </input>
+		
+		<button type="submit"> Submit </button>
+		
+	</form>
+</body>
+</html>
