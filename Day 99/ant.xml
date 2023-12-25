@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project default="test">
+    <target name="test">
+        <echo message="hello world!!" />
+        <mkdir dir="ByAnt" />
+    </target>
+</project>
