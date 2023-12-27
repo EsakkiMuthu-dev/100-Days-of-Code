@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "check",
+            "request": "launch",
+            "mainClass": "check",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "DeamonThreadEXample",
             "request": "launch",
             "mainClass": "DeamonThreadEXample",
