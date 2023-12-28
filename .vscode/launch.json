@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "UnixTimestamp",
+            "request": "launch",
+            "mainClass": "UnixTimestamp",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "check",
             "request": "launch",
             "mainClass": "check",
